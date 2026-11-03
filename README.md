@@ -12,7 +12,7 @@
 
 [![Live Site](https://img.shields.io/badge/Live_Site-khanfarhana.info-26bde2?style=for-the-badge&logo=googlechrome&logoColor=white)](https://khanfarhana.info)
 [![Status](https://img.shields.io/badge/Status-In_Production-4c9f38?style=for-the-badge)](https://khanfarhana.info)
-[![Version](https://img.shields.io/badge/Theme-v1.5.50-19486a?style=for-the-badge)](#release-history)
+[![Version](https://img.shields.io/badge/Theme-v1.5.50-19486a?style=for-the-badge)](#-release-history)
 
 ![WordPress](https://img.shields.io/badge/WordPress_6.x-21759B?style=flat-square&logo=wordpress&logoColor=white)
 ![PHP](https://img.shields.io/badge/PHP_7.4+-777BB4?style=flat-square&logo=php&logoColor=white)
@@ -23,14 +23,14 @@
 
 <br>
 
-[Overview](#project-overview) &nbsp;·&nbsp;
-[Case Study](#case-study) &nbsp;·&nbsp;
-[How It Works](#how-the-website-works) &nbsp;·&nbsp;
-[Features](#key-features) &nbsp;·&nbsp;
-[Screenshots](#screenshots) &nbsp;·&nbsp;
-[Tech Stack](#tech-stack) &nbsp;·&nbsp;
-[Process](#development-process) &nbsp;·&nbsp;
-[Results](#results)
+[Overview](#-project-overview) &nbsp;·&nbsp;
+[Case Study](#-case-study) &nbsp;·&nbsp;
+[How It Works](#-how-the-website-works) &nbsp;·&nbsp;
+[Features](#-key-features) &nbsp;·&nbsp;
+[Screenshots](#-screenshots) &nbsp;·&nbsp;
+[Tech Stack](#-tech-stack) &nbsp;·&nbsp;
+[Process](#-development-process) &nbsp;·&nbsp;
+[Results](#-results)
 
 </div>
 
@@ -115,15 +115,15 @@ A bespoke WordPress theme with:
 
 ```mermaid
 flowchart LR
-    V([Visitor]) -->|HTTPS| WP[WordPress Core]
-    WP --> T[Custom Theme<br/>PHP templates]
-    T --> CPT[(Custom Post Types<br/>stories, media, awards,<br/>projects, testimonials)]
-    T --> OPT[(Theme Options<br/>JSON section data)]
-    T --> FE[Front End<br/>main.css + main.js]
-    FE -->|AJAX + nonce| AX[AJAX Handlers]
-    AX --> MAIL[wp_mail<br/>notifications]
-    AX --> MOD[Pending posts<br/>for moderation]
-    ED([Client / Editor]) --> ADM[Custom Admin Screens]
+    V([Visitor]) -->|HTTPS| WP[WordPress]
+    WP --> T[Theme templates]
+    T --> CPT[(Post types)]
+    T --> OPT[(Section data)]
+    T --> FE[CSS + JS]
+    FE -->|AJAX| AX[Form handlers]
+    AX --> MAIL[Email alerts]
+    AX --> MOD[Review queue]
+    ED([Editor]) --> ADM[Admin screens]
     ADM --> CPT
     ADM --> OPT
 ```
@@ -152,10 +152,10 @@ Each custom post type carries its own fields — source, display date, external 
 
 ```mermaid
 flowchart LR
-    A[Editor logs in<br/>branded login page] --> B[Opens section editor<br/>e.g. Homepage → Impact]
-    B --> C[Edits fields, uploads<br/>media, picks colours]
-    C --> D[Saves — nonce checked,<br/>data sanitised]
-    D --> E[Change is live<br/>on the site]
+    A[Log in] --> B[Open section editor]
+    B --> C[Edit fields and media]
+    C --> D[Save and validate]
+    D --> E[Live on site]
 ```
 
 <br>
